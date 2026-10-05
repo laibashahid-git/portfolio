@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laiba Shahid - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <div class="logo">LAIBA.</div>
+            <ul id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu" id="menuBtn">☰</div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h3 class="reveal">Hello, I'm</h3>
+            <h1 class="reveal">Laiba <span>Shahid</span></h1>
+            <h2 class="reveal">I am <span id="typing"></span></h2>
+            <p class="reveal">I craft responsive, high-performance websites with clean code and modern design principles, focused on delivering impactful digital experiences.</p>
+            <div class="buttons reveal">
+                <a href="#projects" class="btn-red">View My Work →</a>
+                <a href="#contact" class="btn-outline">Hire Me</a>
+            </div>
+        </div>
+        <div class="hero-img reveal">
+            <div class="img-box">
+                <img src="https://i.pravatar.cc/300?img=5" alt="Laiba">
+            </div>
+        </div>
+    </section>
+           <section id="about" class="section">
+  <h2 class="section-title">About <span>Me</span></h2>
+  <div class="about-box">
+    <p>
+      I'm <strong>Laiba Shahid</strong>, a Software Engineer & Frontend Developer based in Lahore. 
+      I'm a motivated and customer-focused professional with hands-on experience in Business Development, 
+      Client Handling, Customer Support, and UI/UX Design.
+      <br><br>
+      Currently working as a <strong>Freelance Frontend Developer at IDEO, Arfa Technology Tower</strong> and as a 
+      <strong>Web Development Intern at Ashwiz Technologies</strong>, I specialize in building custom, responsive 
+      web applications using HTML5, CSS3, JavaScript (ES6), React.js & Next.js. I manage full project lifecycles 
+      from requirement analysis to deployment and API integration.
+      <br><br>
+      Previously, I worked as a UI/UX Designer at Heapware and Business Developer at IDEO where I acquired clients 
+      via Upwork and built strong client relationships. My strength is combining engineering with design + communication.
+    </p>
+</section>
+            <div class="stats">
+                <div><h3>10+</h3><p>Projects</p></div>
+                <div><h3>3 Year</h3><p>Learning</p></div>
+                <div><h3>100%</h3><p>Passion</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2 class="section-title">My <span>Skills</span></h2>
+        <div class="skills-grid">
+            <div class="skill"><span>HTML</span><div class="bar"><div class="fill" data-width="90%"></div></div></div>
+            <div class="skill"><span>CSS / Tailwind</span><div class="bar"><div class="fill" data-width="85%"></div></div></div>
+            <div class="skill"><span>JavaScript</span><div class="bar"><div class="fill" data-width="75%"></div></div></div>
+            <div class="skill"><span>React / Next.js</span><div class="bar"><div class="fill" data-width="60%"></div></div></div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2 class="section-title">My <span>Projects</span></h2>
+        <div class="filter-btns">
+            <button class="f-btn active" data-filter="all">All</button>
+            <button class="f-btn" data-filter="web">Web</button>
+            <button class="f-btn" data-filter="design">Design</button>
+        </div>
+        <div class="project-grid">
+            <div class="card" data-category="web"><h3>E-Commerce Store</h3><p>React + Cart Logic</p><a href="#">Live Demo →</a></div>
+            <div class="card" data-category="design"><h3>Sync Squad Landing</h3><p>Red & Black Theme</p><a href="#">Live Demo →</a></div>
+            <div class="card" data-category="web"><h3>Portfolio v2</h3><p>With Animations & JS</p><a href="#">Live Demo →</a></div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="section-title">Contact <span>Me</span></h2>
+        <form id="contactForm" class="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="msg" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn-red">Send Message</button>
+            <p id="formStatus"></p>
+        </form>
+    </section>
+
+    <footer><p>© 2024 Laiba Shahid | Built with ❤️ & JS Logic</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
