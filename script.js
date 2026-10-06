@@ -37,6 +37,23 @@ window.addEventListener("scroll", ()=>{
     });
 });
 
+// 2.1 NEW: Beautiful Section Slide-Up Animation on Scroll
+const observerOptions = {
+    threshold: 0.15
+};
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('section-visible');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll("section").forEach(section => {
+    section.classList.add('section-hidden');
+    sectionObserver.observe(section);
+});
+
 // 3. Project Filter Logic
 document.querySelectorAll(".f-btn").forEach(btn=>{
     btn.addEventListener("click", ()=>{
@@ -52,13 +69,14 @@ document.querySelectorAll(".f-btn").forEach(btn=>{
     });
 });
 
-// 4. Contact Form Logic
+// 4. Contact Form Logic - Converted to English
 document.getElementById("contactForm").addEventListener("submit", (e)=>{
     e.preventDefault();
     let name = document.getElementById("name").value;
-    document.getElementById("formStatus").innerText = `شکریہ ${name}! آپ کا میسج موصول ہو گیا ہے ❤️ میں جلد جواب دوں گی۔`;
+    document.getElementById("formStatus").innerText = `Thank you ${name}! Your message has been delivered successfully. I'll get back to you soon.`;
+    document.getElementById("formStatus").style.color = "#0ea5e9";
     e.target.reset();
-    setTimeout(()=>{document.getElementById("formStatus").innerText = ""}, 4000);
+    setTimeout(()=>{document.getElementById("formStatus").innerText = ""}, 5000);
 });
 
 // 5. Mobile Menu Logic
