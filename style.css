@@ -88,3 +88,13 @@ footer{text-align:center;padding:30px;border-top:1px solid #E0F2FE;color:#94A3B8
   .hero-text h1{font-size:36px !important;}
   .buttons{flex-direction:row !important;}
 }
+/* Section Scroll Animation */
+.section-hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
