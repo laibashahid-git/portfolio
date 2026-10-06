@@ -1,15 +1,31 @@
-// 1. Typing Animation Logic
+// 1. Typing Animation Logic - FIXED (no delay)
 const texts = ["Frontend Developer", "UI Designer", "React Learner"];
-let count = 0, index = 0, current = "", isDeleting = false;
+let count = 0, index = 1, current = "", isDeleting = false;
 function type(){
     if(count === texts.length) count = 0;
     current = texts[count];
-    if(isDeleting){ document.getElementById("typing").innerText = current.substring(0, index--); }
-    else{ document.getElementById("typing").innerText = current.substring(0, index++); }
+
+    if(isDeleting){
+        document.getElementById("typing").innerText = current.substring(0, index - 1);
+        index--;
+    } else {
+        document.getElementById("typing").innerText = current.substring(0, index);
+        index++;
+    }
+
     let speed = 120;
-    if(isDeleting) speed = 60;
-    if(!isDeleting && index === current.length){ speed = 1500; isDeleting = true; }
-    else if(isDeleting && index === 0){ isDeleting = false; count++; speed = 500; }
+    if(isDeleting) speed = 50;
+
+    if(!isDeleting && index > current.length){
+        speed = 1500;
+        isDeleting = true;
+        index = current.length;
+    } else if(isDeleting && index === 0){
+        isDeleting = false;
+        count++;
+        index = 1;
+        speed = 300;
+    }
     setTimeout(type, speed);
 }
 type();
@@ -37,7 +53,7 @@ window.addEventListener("scroll", ()=>{
     });
 });
 
-// 2.1 NEW: Beautiful Section Slide-Up Animation on Scroll
+// 2.1 Beautiful Section Slide-Up Animation on Scroll
 const observerOptions = {
     threshold: 0.15
 };
@@ -69,7 +85,7 @@ document.querySelectorAll(".f-btn").forEach(btn=>{
     });
 });
 
-// 4. Contact Form Logic - Converted to English
+// 4. Contact Form Logic - Professional English
 document.getElementById("contactForm").addEventListener("submit", (e)=>{
     e.preventDefault();
     let name = document.getElementById("name").value;
