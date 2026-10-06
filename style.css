@@ -58,3 +58,33 @@ footer{text-align:center;padding:30px;border-top:1px solid #E0F2FE;color:#94A3B8
   .img-box{width:240px;height:240px;}
   .btn-red, .btn-outline{padding:12px 22px; font-size:14px;}
 }
+/* FINAL BUTTON FIX - Paste at very end */
+.buttons{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  justify-content:center !important;
+  gap:12px !important;
+  align-items:center !important;
+}
+
+.btn-red, .btn-outline{
+  white-space:nowrap !important;
+  width:auto !important;
+  flex: 0 0 auto !important;
+  margin:0 !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+/* Typing text fix */
+#typing{
+  white-space:nowrap !important;
+  display:inline-block !important;
+  min-width: 170px;
+}
+
+@media(max-width:768px){
+  .hero-text h1{font-size:36px !important;}
+  .buttons{flex-direction:row !important;}
+}
