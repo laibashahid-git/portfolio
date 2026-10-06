@@ -100,3 +100,28 @@ footer{text-align:center;padding:30px;border-top:1px solid #E0F2FE;color:#94A3B8
 }
 .section-hidden { opacity: 0; transform: translateY(50px); transition: all 0.8s ease-out; }
 .section-visible { opacity: 1; transform: translateY(0); }
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+}
+/* FIXED: Buttons left aligned */
+.hero-buttons, .hero-btns, .buttons, .cta-buttons {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+    margin-left: 0 !important;
+}
+/* --- Button Alignment Fix --- */
+.hero .buttons, .hero-buttons {
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .hero .buttons, .hero-buttons {
+    justify-content: center !important;
+  }
+}
