@@ -1,5 +1,5 @@
 // 1. Typing Animation Logic - FIXED (no delay)
-const texts = ["Frontend Developer", "UI Designer", "React Learner"];
+const texts = ["Full Stack Developer", "UI Designer", "React Learner"];
 let count = 0, index = 1, current = "", isDeleting = false;
 function type(){
     if(count === texts.length) count = 0;
